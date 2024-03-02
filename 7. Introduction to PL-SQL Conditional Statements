@@ -1,0 +1,12 @@
+Conditional Statements allows us to control the execution flow of code based on some conditions.
+
+They are of two types:- 1. If statements  2. CASE Statements
+
+1. If are further of 3 types.
+  i). If then.
+  ii). If then else.
+  iii). If then elseif.
+  
+2. Case statements
+  i). Simple Case.
+  ii). Searched Case.
