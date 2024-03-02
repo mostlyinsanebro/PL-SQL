@@ -20,7 +20,7 @@ EXCEPTION
 
 END;
 --------------------------------------------------------
-i). Declaration Section:- This section is optional and all the identifiers like variables, cursors, constants etc. are declared/defined here.
+i). Declaration Section:- This section is optional and all the identifiers like variables, cursors, constants or other objects are declared/defined here.
 
 ii). Execution Section:- This section contains the executable statements that allow us to manipulate the variables that were declared in declaration 
       section. It is a mandatory section and contains DML Commands and SQL_PLUS built-in functions.
