@@ -1,0 +1,54 @@
+There are two types of variables in PL/SQL-> User-defined and Bind(Host) variables.
+
+Unlike user-defined variables that can only be declared in the PL/SL Block, Bind variables can be declared anywhere in the host environment, that's why
+they are also known as Host variables.
+
+Bind variables are the variables that can be created in SQL*PLUS and then referenced in PL/SQL.
+
+-- Declaration of Bind variables
+Bind variables are not initialized in any PL/SQL Block. They can be initialized directly by doing VARIABLE :var_name data_type;
+
+Syntax:- VARIABLE :v_name VARCHAR2(10); 
+
+Example:- VARIABLE v_abhi VARCHAR2(10);
+
+-- Initialization of Bind variables
+
+1. Uisng EXEC
+EXEC :v_name := 'Abhinav'; -- : is used before bind variable in order to reference it in PL/SQL.
+
+ex:- EXEC :v_abhi := 'Abhinav';
+
+OR
+
+2. Using Execution Section
+BEGIN
+ :v_name := 'Abhinav';
+END;
+
+
+
+-- Display the bind variables
+
+1. Using DBMS_OUTPUT -- needs a PL/SQL Execution section.
+
+BEGIN
+
+ :v_abhi := 'Abhinav';
+ dbms_output.put_line(:v_abhi);
+ END;
+
+
+2. Using PRINT -- can be executed in Host env. directly
+
+PRINT :v_abhi;
+
+If we use PRINT command w/o passing any arguments, then all the bind variables will be printed.
+
+3. USING AUTOPRINT -- can be executed in Host env. directly
+
+SET AUTOPRINT ON;
+VARIABLE v_num NUMBER;
+EXEC :v_num:=10;
+
+ 
