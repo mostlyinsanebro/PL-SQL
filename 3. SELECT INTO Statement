@@ -1,0 +1,21 @@
+We can give value to our variable by fetching data from a table in db using Select Into statement.
+
+The datatype and size of the variable that will store the data coming from a column of a table should be same or greater to that of the column 
+from which the data will be fetched.
+
+Example:-
+DECLARE
+
+v_id  NUMBER;
+v_desc VARCHAR2(100);
+BEGIN
+
+SELECT id,description 
+INTO v_id,v_desc
+from es_user.xxab_abhi_test
+where id = 4;
+
+dbms_output.put_line(v_id||' has description '||v_desc);
+END;
+/
+
