@@ -1,0 +1,32 @@
+Varibles are place holders in order to store some data.
+
+These can be initialized either in the Declaraion Section or in the Execution Section.
+
+Example:-
+DECLARE
+
+v_name VARCHAR2(10) := 'Abhinav';
+
+BEGIN
+
+dbms_output.put_line(v_name);
+
+END;
+
+O/P :- Abhinav
+
+---------------------------------------
+
+DECLARE
+
+v_name VARCHAR2(10) := 'Abhinav';
+
+BEGIN
+v_name:= 'Abhi';
+dbms_output.put_line(v_name);
+
+END;
+
+O/P := Abhi
+
+------------------------------------------
