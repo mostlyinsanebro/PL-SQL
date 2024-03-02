@@ -1,0 +1,29 @@
+Values of constants remain unchanges during the program.
+
+* You must initialize a constant at the time of it's declaration.
+
+Syntax:- const_name CONSTANT Datatype := value;
+
+Example:-
+DECLARE
+
+v_num CONSTANT NUMBER(7,6):= 3.141452;
+BEGIN
+
+    -- v_num := 3.141452; do not do this
+    dbms_output.put_line(v_num);
+END;
+
+
+/
+
+
+-- NOT NULL and DEFAULT
+DECLARE
+
+v_num CONSTANT NUMBER(7,6) DEFAULT 3.141452;
+BEGIN
+
+    -- v_num := 3.141452; do not do this
+    dbms_output.put_line(v_num);
+END;
