@@ -1,0 +1,32 @@
+PL/SQL stands for Procedural SQL.
+Blocks are basic programming units in PL/SQL.
+
+There are 2 types of blocks in PL/SQL -> 1.Anonymous Block   2. Named Block.
+
+Each block is divided into 3 sections:-
+
+i). DECLARATION Section (optional)
+
+ii). EXECUTION SECTION (mandatory)
+
+iii). EXCEPTION-hANDLING Section (optional)
+
+------------- PL/SQL Block example --------------------
+DECLARE
+
+BEGIN
+
+EXCEPTION  
+
+END;
+--------------------------------------------------------
+i). Declaration Section:- This section is optional and all the identifiers like variables, cursors, constants etc. are declared/defined here.
+
+ii). Execution Section:- This section contains the executable statements that allow us to manipulate the variables that were declared in declaration 
+      section. It is a mandatory section and contains DML Commands and SQL_PLUS built-in functions.
+	  *SQL-Plus is simply a tool (command line utility) that is installed in our system once we install Oracle database in our system.
+	  DDL Commands can also be written using NDS ( Native Dynamic SQL) or DBMS_SQL built-in functions.
+	
+iii). Exception Block is used to handle the exceptions that may occur in the execution section.
+	  
+
