@@ -1,0 +1,17 @@
+Anchored datatypes are those datatypes which we assign to a variable based on a db object.
+
+var_name types_attribute%type;
+
+We use anchored data types in case the the column from whih we are fetching data gets modified. In that case, the harcoded datatype and 
+size can end up breaking the code, using anchored datatype enables it for dynamic changes.
+
+Example:-
+DECLARE
+    v_name ES_USER.XXAB_ABHI_TUT.name%type;
+BEGIN
+    SELECT name 
+    INTO v_name
+    FROM ES_USER.XXAB_ABHI_TUT
+    WHERE id = 1;
+    dbms_output.put_line(v_name);
+END;
